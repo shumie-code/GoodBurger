@@ -1,0 +1,35 @@
+{
+  "name": "goodburger",
+  "version": "1.0.0",
+  "description": "Persitant data application. Using MYSQL, Ecpress, Express-Handlebars, Node, ORM",
+  "main": "index.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shumie-code/GoodBurger.git"
+  },
+  "keywords": [
+    "MYSQL",
+    "database",
+    "express",
+    "node",
+    "javascript",
+    "handlebars",
+    "orm."
+  ],
+  "author": "Petros Shumie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shumie-code/GoodBurger/issues"
+  },
+  "homepage": "https://github.com/shumie-code/GoodBurger#readme",
+  "dependencies": {
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2"
+  }
+}
