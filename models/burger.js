@@ -11,7 +11,7 @@ var burger = {
     },
     // Add a new burger to the db
     insertOne: function(cols, vals, cb) {
-        orm.insertOne("burgers", ccols, vals, function(res) {
+        orm.insertOne("burgers", cols, vals, function(res) {
             cb(res);
         });
     },
