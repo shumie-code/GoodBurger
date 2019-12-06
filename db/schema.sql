@@ -1,4 +1,4 @@
--- Create burgers_db
+-- Create database in MYSQL
 CREATE DATABASE burgers_db;
 -- Initialze the use of burgers_db in database
 USE burgers_db;

@@ -3,13 +3,13 @@ var orm = require("../config/orm");
 
 // The code that will call the ORM functions using burger input
 var burger = {
-    // Display all burgers in the database
+    // Select all data in burgers_db
     selectAll: function(cb) {
         orm.selectAll("burgers", function(res) {
             cb(res);
         });
     },
-    // Add a new burger to the db
+    // The variables cols and vals are arrays
     insertOne: function(cols, vals, cb) {
         orm.insertOne("burgers", cols, vals, function(res) {
             cb(res);
