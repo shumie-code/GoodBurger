@@ -1,4 +1,7 @@
-//  INSTALL DEPENDENCIES
+// Install Dependencies
+var express = require("express");
+
+// Establish port use for local and Heroku deployment
 var PORT = process.env.PORT || 8080;
 
 var app = express();
