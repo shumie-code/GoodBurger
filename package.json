@@ -4,7 +4,8 @@
   "description": "Persitant data application. Using MYSQL, Ecpress, Express-Handlebars, Node, ORM",
   "main": "index.js",
   "scripts": {
-    "test": "node server.js"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -26,10 +27,22 @@
   },
   "homepage": "https://github.com/shumie-code/GoodBurger#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "mysql": "^2.17.1"
   },
   "devDependencies": {
-    "eslint": "^6.7.2"
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-config-wesbos": "0.0.19",
+    "eslint-plugin-html": "^5.0.5",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "prettier": "^1.19.1"
   }
 }
