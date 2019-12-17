@@ -1,9 +1,8 @@
-// Wait until the DOM is fully loaded to attach our handlers
-
+// Make sure we wait to attach our handlers until the DOM is fully loaded
 $(function() {
 
-    //Add a new burger
-    $(".create-form").on("submit", function(event) {
+    // Add a new burger
+    $(".create-form").on("submit", function (event) {
         event.preventDefault();
 
         var newBurger = {
@@ -11,14 +10,13 @@ $(function() {
             devoured: 0
         };
 
-
-        // Send Post Request
+        // Send the POST request
         $.ajax("/api/burgers", {
             type: "POST",
             data: newBurger
         }).then(function() {
             console.log("Added new burger");
-            // Reload the page to get the updated burger list
+            // Reload the page to get the updated burgers
             location.reload();
         });
     });
@@ -28,13 +26,11 @@ $(function() {
         event.preventDefault();
 
         var id = $(this).data("id");
-        var devoredState = {
+        var devouredState = { 
             devoured: 1
         };
 
-
-
-        // Send Put Request
+        // Send the PUT request
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: devouredState
@@ -42,19 +38,18 @@ $(function() {
             console.log("Burger devoured");
             location.reload();
         });
-
-
-        $(".trashburger").on("click", function(event) {
-            event.preventDefault();
-
-            var id = $(this).data("id");
-
-            // Send the delete request
-            $.ajax({
-                type: "DELETE",
-                url: "/api/burgers/" + id
-            }).then(location.reload());
-    
-        });
-     });
     });
+
+
+    $(".trashburger").on("click", function(Event) {
+        event.preventDefault();
+
+        var id = $(this).data("id");
+
+        // Send the DELETE request
+        $.ajax({
+            type: "DELETE",
+            url: "/api/burgers/" + id
+        }).then(location.reload());
+    });
+})

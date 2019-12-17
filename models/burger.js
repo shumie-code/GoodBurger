@@ -34,4 +34,4 @@ const burger = {
 // Export at the end of the burger.js file
 module.exports = burger;
 
-module.exports = burger.js;
+
